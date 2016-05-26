@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>GTA Ventas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <!--CSS-->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_menu_2.css">
+        <link rel="shortcut icon" href="imagenes/shopping.ico" >
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script_menu_2.js"></script>
+  
+    </head>
+    <header>
+        <img src = "imagenes/header.png">
+    </header>
+    <body>
+        <ul id="navigation_2">
+            <li class="inicio"><a href = "http://localhost:8080/GTA/Inicio/Inicio.html" title="Inicio"><img src = "imagenes/start.png"></a></li>
+            <li class="almacen"><a href="http://localhost:8080/GTA/Almacen/Almacen.html" title="Almacen"><img src = "imagenes/stock.png"></a></li>
+            <li class="ventas"><a href="http://localhost:8080/GTA/Ventas/Ventas.html" title="Ventas"><img src = "imagenes/sales.png"></a></li>
+            <li class="pedidos"><a href="http://localhost:8080/GTA/Pedidos/Pedidos.html" title="Pedidos"><img src = "imagenes/shopping.png"></a></li>
+            <li class="consultas"><a href="http://localhost:8080/GTA/Consultas/Consultas.html" title="Consultas"><img src = "imagenes/consulations.png"></a></li>
+            <li class="reportes"><a href="http://localhost:8080/GTA/Reportes/Reportes.html" title="Reportes"><img src = "imagenes/reports.png"></a></li>
+            <li class="administracion"><a href="http://localhost:8080/GTA/Administracion/Administracion.html" title="Administracion"><img src = "imagenes/administration.png"></a></li>
+        </ul>
+        <div class = "contenedor">
+            <h1>Venta de productos</h1>
+            <form action="" method="post">
+                <input type="text" name="ventap" class="venta" placeholder="Ingrese Codigo de Barras    ">
+                <button type="submit" class="boton1">Agregar</button>  <button type="button" class="boton2">Busqueda Manual</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class = "total transparencia"></div>
+            <div class = "carrito transparencia"></div>
+            <button type="button" class="boton3">Finalizar</button>
+        </div>
+        <div class="footer transparencia">
+            <p>© 2014 Developed by Trilobyte</p>
+        </div>
+    </body>
+</html>

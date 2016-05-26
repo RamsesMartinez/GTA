@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Almacen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_menu.css">
+        <link rel="stylesheet" href="css/style_menu_2.css">
+        <link rel="shortcut icon" href="imagenes/shopping.ico" >
+        
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/script_menu.js"></script>
+        <script type="text/javascript" src="js/script_menu_2.js"></script>
+    </head>
+    <header>
+        <img src = "imagenes/header.png">
+    </header>
+    <body>
+        <ul id="navigation">
+            <li class="agregar"><a  title="agragar"><img onClick="document.getElementById('agregar_producto').style.display='block';
+                                                                  document.getElementById('quitar_producto').style.display='none';
+                                                                  document.getElementById('actualizar_producto1').style.display='none'; 
+                                                                  document.getElementById('actualizar_producto2').style.display='none';" id ="add" src = "imagenes/add.png"></a></li>
+            <li class="eliminar"><a title="eliminar"><img onClick="document.getElementById('agregar_producto').style.display='none';
+                                                                   document.getElementById('quitar_producto').style.display='block';
+                                                                   document.getElementById('actualizar_producto1').style.display='none'; 
+                                                                   document.getElementById('actualizar_producto2').style.display='none';" id ="del" src = "imagenes/remove.png"></a></li>
+            <li class="actualizar"><a title="actualizar"><img onClick="document.getElementById('agregar_producto').style.display='none';
+                                                                       document.getElementById('quitar_producto').style.display='none';
+                                                                       document.getElementById('actualizar_producto1').style.display='block'; 
+                                                                       document.getElementById('actualizar_producto2').style.display='block';" id ="refresh" src = "imagenes/update.png" onClick="alert('gracias por pulsarme')"></a></li>
+        </ul>
+        <ul id="navigation_2">
+            <li class="inicio"><a href = "http://localhost:8080/GTA/Inicio/Inicio.html" title="Inicio"><img src = "imagenes/start.png"></a></li>
+            <li class="almacen"><a href="http://localhost:8080/GTA/Almacen/Almacen.html" title="Almacen"><img src = "imagenes/stock.png"></a></li>
+            <li class="ventas"><a href="http://localhost:8080/GTA/Ventas/Ventas.html" title="Ventas"><img src = "imagenes/sales.png"></a></li>
+            <li class="pedidos"><a href="http://localhost:8080/GTA/Pedidos/Pedidos.html" title="Pedidos"><img src = "imagenes/shopping.png"></a></li>
+            <li class="consultas"><a href="http://localhost:8080/GTA/Consultas/Consultas.html" title="Consultas"><img src = "imagenes/consulations.png"></a></li>
+            <li class="reportes"><a href="http://localhost:8080/GTA/Reportes/Reportes.html" title="Reportes"><img src = "imagenes/reports.png"></a></li>
+            <li class="administracion"><a href="http://localhost:8080/GTA/Administracion/Administracion.html" title="Administracion"><img src = "imagenes/administration.png"></a></li>
+        </ul>
+        <div class = "agregar_producto" id = "agregar_producto">
+            <h1>Agregar Producto</h1>
+            <form action="" method="post">
+                <input type="text" name="codigob" class="codigob" placeholder="Codigo de Barras">
+                <input type="text" name="nombre" class="nombre" placeholder="Nombre">
+                <input type="text" name="proveedor" class="proveedor" placeholder="Proveedor">
+                <input type="text" name="costocompra" class="costocompra" placeholder="Costo de Compra">
+                <input type="text" name="costoventa" class="costoventa" placeholder="Costo de Venta">
+                <input type="text" name="stockseguro" class="stockseguro" placeholder="Stock de Seguridad">
+                <input type="text" name="clasificacion" class="clasificacion" placeholder="Clasificacion">
+                <button type="submit">Agregar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class = "quitar_producto" id = "quitar_producto">
+            <h1>Eliminar Producto</h1>
+            <form action="" method="post">
+                <input type="text" name="nombre_codigo" class="nombre_codigo" placeholder="Inserte el nombre o el codigo de barras">
+                <button type="submit">Buscar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class= "encontrados transparencia"></div>
+            <form>
+                <input type="text" name="codigo_eliminar" class="codigo_eliminar" placeholder="Producto a eliminar">
+                <button type="submit">Eliminar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class="actualizar_producto1" id="actualizar_producto1">
+            <h1>Buscar Producto</h1>
+            <form action="" method="post">
+                <input type="text" name="buscar_producto" class="buscar_producto" placeholder="Inserte el nombre o el codigo de barras">
+                <button type="submit">Buscar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class= "encontrados transparencia"></div>
+        </div>
+         <div class = "actualizar_producto2" id="actualizar_producto2">
+            <h1>Actualizar Producto</h1>
+            <form action="" method="post">
+                <input type="text" name="codigob1" class="codigob1" placeholder="Codigo de Barras">
+                <input type="text" name="nombre1" class="nombre1" placeholder="Nombre">
+                <input type="text" name="proveedor1" class="proveedor1" placeholder="Proveedor">
+                <input type="text" name="costocompra1" class="costocompr1a" placeholder="Costo de Compra">
+                <input type="text" name="costoventa1" class="costoventa1" placeholder="Costo de Venta">
+                <input type="text" name="stockseguro1" class="stockseguro1" placeholder="Stock de Seguridad">
+                <input type="text" name="clasificacion1" class="clasificacion1" placeholder="Clasificacion">
+                <button type="submit">Actualizar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class="footer transparencia">
+            <p>© 2014 Developed by Trilobyte</p>
+        </div>
+    </body>
+</html>
+

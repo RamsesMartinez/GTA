@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Administracion GTA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_menu.css">
+        <link rel="stylesheet" href="css/style_menu_2.css">
+        <link rel="shortcut icon" href="imagenes/shopping.ico" >
+        
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script_menu.js"></script>
+        <script type="text/javascript" src="js/script_menu_2.js"></script>
+        
+    </head>
+    <header>
+        <img src = "imagenes/header.png">
+    </header>
+    <body>
+        <ul id="navigation">
+            <li class="proveedores"><a title="Proveedores"><img onClick = "document.getElementById('selector1').style.display='block';
+                                                                           document.getElementById('selector11').style.display='block';
+                                                                           document.getElementById('selector111').style.display='block';
+                                                                           document.getElementById('selector2').style.display='none';
+                                                                           document.getElementById('selector22').style.display='none';
+                                                                           document.getElementById('selector222').style.display='none';
+                                                                           document.getElementById('autorizar').style.display='block';
+                                                        document.getElementById('Buscar_empleado').style.display='none';
+                                                        document.getElementById('autorizar').style.display='none';
+                                                        document.getElementById('actualizar_empleado').style.display='none';
+                                                        document.getElementById('eliminar_empleado').style.display='none';" id ="add" src = "imagenes/agent.png" ></a></li>
+            <li class="usuarios"><a title="Usuarios"><img onClick = "document.getElementById('selector1').style.display='none';
+                                                                           document.getElementById('selector11').style.display='none';
+                                                                           document.getElementById('selector111').style.display='none';
+                                                                           document.getElementById('selector2').style.display='block';
+                                                                           document.getElementById('selector22').style.display='block';
+                                                                           document.getElementById('selector222').style.display='block';
+                                                                           document.getElementById('agregar_proveedor').style.display='none';
+                                                                            document.getElementById('Buscar_Proveedor').style.display='none';
+                                                                            document.getElementById('actualizar_proveedor').style.display='none';
+                                                                            document.getElementById('eliminar_proveedor').style.display='none';" id ="add" src = "imagenes/letter.png"></a></li>
+        </ul>
+        <ul id="navigation_2">
+            <li class="inicio"><a href = "http://localhost:8080/GTA/Inicio/Inicio.html" title="Inicio"><img src = "imagenes/start.png"></a></li>
+            <li class="almacen"><a href="http://localhost:8080/GTA/Almacen/Almacen.html" title="Almacen"><img src = "imagenes/stock.png"></a></li>
+            <li class="ventas"><a href="http://localhost:8080/GTA/Ventas/Ventas.html" title="Ventas"><img src = "imagenes/sales.png"></a></li>
+            <li class="pedidos"><a href="http://localhost:8080/GTA/Pedidos/Pedidos.html" title="Pedidos"><img src = "imagenes/shopping.png"></a></li>
+            <li class="consultas"><a href="http://localhost:8080/GTA/Consultas/Consultas.html" title="Consultas"><img src = "imagenes/consulations.png"></a></li>
+            <li class="reportes"><a href="http://localhost:8080/GTA/Reportes/Reportes.html" title="Reportes"><img src = "imagenes/reports.png"></a></li>
+            <li class="administracion"><a href="http://localhost:8080/GTA/Administracion/Administracion.html" title="Administracion"><img src = "imagenes/administration.png"></a></li>
+        </ul>
+        <button type="button" id = "selector1" onClick = "document.getElementById('agregar_proveedor').style.display='block';
+                                                        document.getElementById('Buscar_Proveedor').style.display='none';
+                                                        document.getElementById('actualizar_proveedor').style.display='none';
+                                                        document.getElementById('eliminar_proveedor').style.display='none';">Agregar</button>
+        <button type="button" id = "selector11" onClick = "document.getElementById('agregar_proveedor').style.display='none';
+                                                        document.getElementById('Buscar_Proveedor').style.display='block';
+                                                        document.getElementById('actualizar_proveedor').style.display='block';
+                                                        document.getElementById('eliminar_proveedor').style.display='none';">Actualizar</button>
+        <button type="button" id = "selector111" onClick = "document.getElementById('agregar_proveedor').style.display='none';
+                                                        document.getElementById('Buscar_Proveedor').style.display='none';
+                                                        document.getElementById('actualizar_proveedor').style.display='none';
+                                                        document.getElementById('eliminar_proveedor').style.display='block';">Eliminar</button>
+        <button type="button" id = "selector2" onClick = "document.getElementById('autorizar').style.display='block';
+                                                        document.getElementById('Buscar_empleado').style.display='none';
+                                                        document.getElementById('actualizar_empleado').style.display='none';
+                                                        document.getElementById('eliminar_empleado').style.display='none';">Autorizar</button>
+        <button type="button" id = "selector22" onClick = "document.getElementById('autorizar').style.display='none';
+                                                        document.getElementById('Buscar_empleado').style.display='block';
+                                                        document.getElementById('actualizar_empleado').style.display='block';
+                                                        document.getElementById('eliminar_empleado').style.display='none';">Actualizar</button>
+        <button type="button" id = "selector222" onClick = "document.getElementById('autorizar').style.display='none';
+                                                        document.getElementById('Buscar_empleado').style.display='none';
+                                                        document.getElementById('actualizar_empleado').style.display='none';
+                                                        document.getElementById('eliminar_empleado').style.display='block';">Eliminar</button>
+        <div class = "agregar_proveedor" id = "agregar_proveedor">
+            <h1>Agregar Proveedor</h1>
+            <form action="" method="post">
+                <input type="text" name="codigob" class="codigob" placeholder="ID">
+                <input type="text" name="nombre" class="nombre" placeholder="Nombre">
+                <input type="text" name="proveedor" class="proveedor" placeholder="Categoria">
+                <button type="submit" id="submits">Agregar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class="Buscar_Proveedor" id="Buscar_Proveedor">
+            <h1>Buscar Proveedor</h1>
+            <form action="" method="post">
+                <input type="text" name="buscar_producto" class="buscar_producto" placeholder="Ingrese ID o nombre del proveedor">
+                <button type="submit" id ="submits">Buscar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+         <div class = "actualizar_proveedor" id="actualizar_proveedor">
+            <h1>Actualizar Proveedor</h1>
+            <form action="" method="post">
+                <input type="text" name="codigob" class="codigob" placeholder="ID">
+                <input type="text" name="nombre" class="nombre" placeholder="Nombre">
+                <input type="text" name="proveedor" class="proveedor" placeholder="Categoria">
+                <button type="submit" id="submits">Actualizar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class = "eliminar_proveedor" id="eliminar_proveedor">
+            <h1>Eliminar Proveedor</h1>
+            <form action="" method="post">
+                <input type="text" name="buscar_producto" class="buscar_producto" placeholder="Ingrese ID o nombre del proveedor">
+                <button type="submit" id="submits">Eliminar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class = "autorizar" id="autorizar">
+            <h1>Autorizar Empleados</h1>
+            <form action="" method="post">
+                <input type="text" name="nombre" class="nombre" placeholder="ID Empleado">
+                <input type="text" name="nombre" class="nombre" placeholder="Nombre">
+                <input type="text" name="direccion" class="direccion" placeholder="Direccion">
+                <input type="text" name="telefono" class="telefono" placeholder="Telefono">
+                <input type="text" name="correo" class="correo" placeholder="Correo">
+                <button type="submit" id="submits2">Aceptar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class="Buscar_empleado" id="Buscar_empleado">
+            <h1>Buscar Empleado</h1>
+            <form action="" method="post">
+                <input type="text" name="buscar_producto" class="buscar_producto" placeholder="Ingrese ID o nombre del Empleado">
+                <button type="submit" id ="submits">Buscar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+         <div class = "actualizar_empleado" id="actualizar_empleado">
+            <h1>Actualizar Empleado</h1>
+            <form action="" method="post">
+                <input type="text" name="nombre" class="nombre" placeholder="ID Empleado">
+                <input type="text" name="nombre" class="nombre" placeholder="Nombre">
+                <input type="text" name="direccion" class="direccion" placeholder="Direccion">
+                <input type="text" name="telefono" class="telefono" placeholder="Telefono">
+                <input type="text" name="correo" class="correo" placeholder="Correo">
+                <button type="submit" id="submits">Actualizar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class = "eliminar_empleado" id="eliminar_empleado">
+            <h1>Eliminar Empleado</h1>
+            <form action="" method="post">
+                <input type="text" name="buscar_producto" class="buscar_producto" placeholder="Ingrese ID o nombre del empleado">
+                <button type="submit" id="submits">Eliminar</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+        <div class="footer transparencia">
+            <p>© 2014 Developed by Trilobyte</p>
+        </div>
+    </body>
+</html>
+

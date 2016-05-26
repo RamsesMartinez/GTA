@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Reportes GTA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_menu.css">
+        <link rel="stylesheet" href="css/style_menu_2.css">
+        <link rel="shortcut icon" href="imagenes/shopping.ico" >
+        
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script_menu.js"></script>
+        <script type="text/javascript" src="js/script_menu_2.js"></script>
+        
+    </head>
+    <header>
+        <img src = "imagenes/header.png">
+    </header>
+    <body>
+        <ul id="navigation">
+            <li class="reportev"><a title="agragar"><img id ="repv" src = "imagenes/shopping.png" onClick="document.getElementById('reporte_ventas').style.display='block';
+                                                                                                           document.getElementById('reporte_ganancias').style.display='none';"></a></li>
+            <li class="reporteg"><a title="eliminar"><img id ="repg" src = "imagenes/earnings.png" onClick="document.getElementById('reporte_ventas').style.display='none';
+                                                                                                           document.getElementById('reporte_ganancias').style.display='block';"></a></li>
+        </ul>
+        <ul id="navigation_2">
+            <li class="inicio"><a href = "http://localhost:8080/GTA/Inicio/Inicio.html" title="Inicio"><img src = "imagenes/start.png"></a></li>
+            <li class="almacen"><a href="http://localhost:8080/GTA/Almacen/Almacen.html" title="Almacen"><img src = "imagenes/stock.png"></a></li>
+            <li class="ventas"><a href="http://localhost:8080/GTA/Ventas/Ventas.html" title="Ventas"><img src = "imagenes/sales.png"></a></li>
+            <li class="pedidos"><a href="http://localhost:8080/GTA/Pedidos/Pedidos.html" title="Pedidos"><img src = "imagenes/shopping.png"></a></li>
+            <li class="consultas"><a href="http://localhost:8080/GTA/Consultas/Consultas.html" title="Consultas"><img src = "imagenes/consulations.png"></a></li>
+            <li class="reportes"><a href="http://localhost:8080/GTA/Reportes/Reportes.html" title="Reportes"><img src = "imagenes/reports.png"></a></li>
+            <li class="administracion"><a href="http://localhost:8080/GTA/Administracion/Administracion.html" title="Administracion"><img src = "imagenes/administration.png"></a></li>
+        </ul>
+        <div class="reporte_ventas" id="reporte_ventas">
+            <h1>Reporte de Ventas</h1>
+            <form id="pdff">
+            <label>Desde</label><input type="text" name="desde" id="desde" placeholder="DD/MM/AA">
+            <label>Hasta</label><input type="text" name="hasta" id="hasta" placeholder="DD/MM/AA">
+            </form>
+            <button type="submit" id = "enviar">Generar</button>
+            <table id = "ventas">
+               <tr>
+                    <td>Fecha</td>
+                    <td>Usuario</td>
+                    <td>Productos Vendidos</td>
+                    <td>Total de Ventas</td>
+                    <td>Ganancias Netas</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                   
+                </tr>
+
+            </table>
+            <button type="button" id = "pdf">Crear PDF</button>
+        </div>
+        <div class="reporte_ganancias"id="reporte_ganancias">
+            <h1>Reporte de Ganancias</h1>
+            <form id="pdff">
+            <label>Desde</label><input type="text" name="desde" id="desde" placeholder="DD/MM/AA">
+            <label>Hasta</label><input type="text" name="hasta" id="hasta" placeholder="DD/MM/AA">
+            </form>
+            <button type="submit" id = "enviar">Generar</button>
+            <table id = "ventas">
+               <tr>
+                    <td>Fecha</td>
+                    <td>Total de Ventas</td>
+                    <td>Total de Compras</td>
+                    <td>Ganancia Neta</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                  
+                </tr>
+
+            </table>
+            <button type="button" id = "pdf">Crear PDF</button>
+        </div>
+        <div class="footer transparencia">
+            <p>© 2014 Developed by Trilobyte</p>
+        </div>
+    </body>
+</html>
+

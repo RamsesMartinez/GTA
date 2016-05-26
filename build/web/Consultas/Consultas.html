@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Consultas GTA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_menu.css">
+        <link rel="stylesheet" href="css/style_menu_2.css">
+        <link rel="shortcut icon" href="imagenes/shopping.ico" >
+        
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script_menu.js"></script>
+        <script type="text/javascript" src="js/script_menu_2.js"></script>
+        
+    </head>
+    <header>
+        <img src = "imagenes/header.png">
+    </header>
+    <body>
+        <ul id="navigation">
+            <li class="individual_consult"><a title="Consulta Individual"><img onClick = "document.getElementById('consulta_individual').style.display='block';
+                                                                                          document.getElementById('consulta_grupal').style.display='none';" id ="add" src = "imagenes/one.png"></a></li>
+            <li class="grupal_consult"><a title="Consulta Grupal"><img onClick = "document.getElementById('consulta_individual').style.display='none';
+                                                                                  document.getElementById('consulta_grupal').style.display='block';" id ="add" src = "imagenes/two.png" id ="del" src = "imagenes/two.png"></a></li>
+        </ul>
+        <ul id="navigation_2">
+            <li class="inicio"><a href = "http://localhost:8080/GTA/Inicio/Inicio.html" title="Inicio"><img src = "imagenes/start.png"></a></li>
+            <li class="almacen"><a href="http://localhost:8080/GTA/Almacen/Almacen.html" title="Almacen"><img src = "imagenes/stock.png"></a></li>
+            <li class="ventas"><a href="http://localhost:8080/GTA/Ventas/Ventas.html" title="Ventas"><img src = "imagenes/sales.png"></a></li>
+            <li class="pedidos"><a href="http://localhost:8080/GTA/Pedidos/Pedidos.html" title="Pedidos"><img src = "imagenes/shopping.png"></a></li>
+            <li class="consultas"><a href="http://localhost:8080/GTA/Consultas/Consultas.html" title="Consultas"><img src = "imagenes/consulations.png"></a></li>
+            <li class="reportes"><a href="http://localhost:8080/GTA/Reportes/Reportes.html" title="Reportes"><img src = "imagenes/reports.png"></a></li>
+            <li class="administracion"><a href="http://localhost:8080/GTA/Administracion/Administracion.html" title="Administracion"><img src = "imagenes/administration.png"></a></li>
+        </ul>
+        <div class="consulta_individual" id="consulta_individual">
+                <h1>Consulta Individual</h1>
+            <input type="text" name="codigob" id="codigob" placeholder="Codigo de Barras">
+            <button type="submit" id = "enviar">Buscar</button>
+            <table id = "individual">
+                <tr>
+                    <td width="50%">Codigo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Existencia</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Clasificacion</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Stock de Seguridad</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Proveedor</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Costo de Compra</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Costo de Venta</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="consulta_grupal" id="consulta_grupal">
+                <h1>Consulta Grupal</h1>
+           <SELECT name = "proveedores" id ="proveedores" class = "transparencia">
+                <OPTION selected="0">Lista de Proovedores</OPTION>
+            </SELECT>
+            <button type="submit" id = "enviar">Consultar</button>
+            <table id = "grupal">
+                <tr>
+                    <td>Codiogo</td>
+                    <td>Nombre</td>
+                    <td>Existencia</td>
+                    <td>Clasificacion</td>
+                    <td>Stock de Seguridad</td>
+                    <td>Proveedor</td>
+                    <td>Costo de compra </td>
+                    <td>Costo de Venta</td> 
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+
+            </table>
+        </div>
+        <div class="footer transparencia">
+            <p>© 2014 Developed by Trilobyte</p>
+        </div>
+    </body>
+</html>
+
