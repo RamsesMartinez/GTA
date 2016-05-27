@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
     <head>
-        <meta charset="utf-8">
-        <title>GTA</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="GTA">
-        <meta name="author" content="Trilobyte">
-
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-        <link rel="stylesheet" href="Login/css/reset.css">
-        <link rel="stylesheet" href="Login/css/style.css">
-        <link rel="shortcut icon" href="Login/imagenes/shopping.ico" > 
-        
-        <!-- Javascript -->
-        <script src="Login/js/jquery-1.8.2.min.js"></script>
-        <script src="Login/js/scripts.js"></script>
-        
+        <title>Consultas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
     </head>
-    <header>
-            <img src = "Login/imagenes/header.png">
-    </header>
     <body>
-        <div class="page-container">
-            <h1>Login</h1>
-            <form action="http://localhost:8080/GTA/Inicio/Inicio.html" method="post">
-                <input type="text" name="username" class="username" placeholder="Username">
-                <input type="password" name="password" class="password" placeholder="Password">
-                <button type="submit">Sign In</button>
-                <div class="error"><span>+</span></div>
-            </form>
-        </div>
-        <div class="footer" id="foot">
-            <a href="Solicitante/Solicitante.html">Ingresar como Solicitante</a>
-            <p>© 2014 Developed by Trilobyte</p>
-        </div>
+        <form action="todos.jsp" method="post">
+            <input type="submit" name="boton1" value="Sueldo"><BR><BR>
+            <input type="submit" name="boton2" value="Puesto y sueldo 1"><BR><BR>
+            <input type="submit" name="boton3" value="Puesto"><BR><BR>
+            <input type="submit" name="boton4" value="Puesto y sueldo 2"><BR><BR>
+            <input type="submit" name="boton5" value="Dependencia"><BR><BR>
+            <input type="submit" name="boton6" value="Puesto y dependencia"><BR><BR>
+            <input type="submit" name="boton7" value="Total"><BR><BR>
+            <input type="submit" name="boton8" value="Subtotales y total">
+        </form>
     </body>
 </html>
-
